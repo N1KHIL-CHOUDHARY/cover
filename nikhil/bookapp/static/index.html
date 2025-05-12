@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Cover Design</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #2c2b3e, #4c4c6a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Georgia', serif;
+    }
+    .cover {
+      width: 360px;
+      height: 560px;
+      background: url('/api/placeholder/400/600?text=Book+Background') center/cover no-repeat;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px 30px;
+      color: #fff;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+      backdrop-filter: blur(2px);
+      z-index: 1;
+      border-radius: 16px;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .title {
+      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+      font-size: 32px;
+      text-align: center;
+      line-height: 1.3;
+      font-weight: bold;
+      margin-top: 60px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+    .subtitle {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 10px;
+      color: #ddd;
+      font-style: italic;
+      opacity: 0.9;
+    }
+    .author {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 22px;
+      text-align: right;
+      bottom: 50px;
+      color: #ffe4c4;
+      padding-right: 5px;
+    }
+    .border-decor {
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      top: 5%;
+      left: 5%;
+      border: 1.5px dashed rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .edition {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-weight: bold;
+      z-index: 3;
+      backdrop-filter: blur(4px);
+    }
+    .publisher {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      font-size: 11px;
+      color: #aaa;
+      z-index: 2;
+    }
+    .author-photo {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      object-fit: cover;
+      z-index: 3;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="overlay"></div>
+    <div class="edition">SPECIAL EDITION</div>
+    <div class="content">
+      <div>
+        <div class="title">Whispers of<br>Eternity</div>
+        <div class="subtitle">A tale of timeless connections</div>
+      </div>
+      <div class="author">Elena Rodriguez</div>
+    </div>
+    <div class="border-decor"></div>
+    <div class="publisher">Horizon Books</div>
+    <img src="24900366-Photoroom.png" alt="Author Photo" class="author-photo">
+  </div>
+</body>
+</html>
